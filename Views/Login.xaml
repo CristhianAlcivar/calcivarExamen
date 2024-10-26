@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcivarExamen.Views.Login"
+             >
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="25"
+        VerticalOptions="Center">
+
+        <Label 
+            Text="Login"
+            TextColor="red"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image Source="logo.png"/>
+
+        <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO"
+                FontSize="16"
+                TextColor="White"
+                Grid.Row="0"
+                Grid.Column="0"
+                VerticalOptions="Center"/>
+
+            <Entry x:Name="txtUsuario"
+                Placeholder="Ingrese el usuario"
+                PlaceholderColor="#CCCCCC"
+                TextColor="White"
+                BackgroundColor="#1C1C1C"
+                FontSize="16"
+                Grid.Row="0"
+                Grid.Column="1"/>
+
+            <Label Text="CONTRASEÑA"
+                FontSize="16"
+                TextColor="White"
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center"/>
+
+            <Entry x:Name="txtContraseña"
+                Placeholder="Ingrese la contraseña"
+                PlaceholderColor="#CCCCCC"
+                IsPassword="True"
+                TextColor="White"
+                BackgroundColor="#1C1C1C"
+                FontSize="16"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+            <Button Text="Iniciar sesión"
+                 FontAttributes="Bold"
+                 FontSize="18"
+                 BackgroundColor="Green"  
+                 TextColor="Black"
+                 Clicked="OnLoginClicked"
+                 HeightRequest="50"
+                 CornerRadius="15"
+                 HorizontalOptions="FillAndExpand"
+                 Grid.Row="2"
+                 Grid.Column="0"
+                 />
+            <Button Text="Acerca de"
+                 FontAttributes="Bold"
+                 FontSize="18"
+                 BackgroundColor="Red"  
+                 TextColor="Black"
+                 Clicked="Button_Clicked"
+                 HeightRequest="50"
+                 CornerRadius="15"
+                 HorizontalOptions="FillAndExpand"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                />
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

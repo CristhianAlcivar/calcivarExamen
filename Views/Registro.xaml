@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcivarExamen.Views.Registro"
+            >
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="25" >
+            <Label 
+                x:Name="usuario"
+                TextColor="White"
+                FontSize="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" />
+            <Label 
+                Text="Registro"
+                TextColor="Blue"
+                FontSize="22"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingresar Nombre"
+                     TextColor="White"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     VerticalOptions="Center"/>
+
+                <Entry x:Name="txtNombre"
+                     Placeholder="Ingrese el nombre"
+                     PlaceholderColor="#CCCCCC"
+                     TextColor="White"
+                     BackgroundColor="#1C1C1C"
+                     Grid.Row="1"
+                     Grid.Column="0"/>
+
+                <Label Text="Ingresar Apellido"
+                     TextColor="White"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     VerticalOptions="Center"/>
+
+                <Entry x:Name="txtApellido"
+                     Placeholder="Ingrese el apellido"
+                     PlaceholderColor="#CCCCCC"
+                     IsPassword="True"
+                     TextColor="White"
+                     BackgroundColor="#1C1C1C"
+                     Grid.Row="1"
+                     Grid.Column="1"/>
+
+                <Label Text="Voltiamperio VA"
+                     TextColor="White"
+                     Grid.Row="0"
+                     Grid.Column="2"
+                     VerticalOptions="Center"/>
+
+                <Picker x:Name="pickerVoltiamperio" Title="Valor" Grid.Row="1"  Grid.Column="2">
+                    <Picker.Items>
+                        <x:String>500</x:String>
+                        <x:String>750</x:String>
+                        <x:String>1000</x:String>
+
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Fecha"
+                      TextColor="White"
+                      Grid.Row="0"
+                      Grid.Column="0"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"/>
+
+                <DatePicker 
+                    x:Name="txtFecha"
+                    TextColor="White"
+                    BackgroundColor="#1C1C1C"
+                    Grid.Row="0"
+                    Grid.Column="1"/>                 
+
+                <Label Text="Ciudad"
+                      TextColor="White"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"/>
+
+                <Picker x:Name="pickerCiudad"  Grid.Row="1"  Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Cuenta</x:String>
+                        <x:String>Ambato</x:String>
+                        <x:String>Guayaquil</x:String>
+
+                    </Picker.Items>
+                </Picker>
+                
+                <Label Text="Monto inicial"
+                      TextColor="White"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"/>
+
+                <Entry x:Name="txtMonto"
+                      PlaceholderColor="#CCCCCC"
+                      TextColor="White"
+                      BackgroundColor="#1C1C1C"
+                      Grid.Row="2"
+                      Grid.Column="1"/>
+
+                <Button Text="Calcular pago"
+                      BackgroundColor="Yellow"  
+                      TextColor="Black"
+                      Clicked="OnCalcularPagoClicked"
+                      HeightRequest="30"
+                      CornerRadius="15"
+                      HorizontalOptions="FillAndExpand"
+                      Grid.Row="3"
+                      Grid.Column="0"
+                      />
+                <Entry x:Name="txtPago"
+                   PlaceholderColor="#CCCCCC"
+                   TextColor="White"
+                   BackgroundColor="#1C1C1C"
+                   Grid.Row="3"
+                   Grid.Column="1"/>
+
+
+            </Grid>
+            <Button Text="Iniciar sesión"
+                  FontAttributes="Bold"
+                  FontSize="18"
+                  BackgroundColor="Green"  
+                  TextColor="Black"
+                  Clicked="OnResumenClicked"
+                  HeightRequest="50"
+                  CornerRadius="15"
+                  HorizontalOptions="FillAndExpand"
+                  Grid.Row="2"
+                  Grid.Column="0"
+                  />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

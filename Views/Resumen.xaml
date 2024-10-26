@@ -6,11 +6,11 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label 
-                x:Name="usuario"
+                x:Name="txtUsuario"
                 TextColor="White"
                 FontSize="20"
                 VerticalOptions="Center" 
-                HorizontalOptions="End" />
+                HorizontalOptions="Center" />
             <Label 
                 Text="Resumen"
                 TextColor="Green"
@@ -49,36 +49,112 @@
                 
                 <Label Text="Apellido"
                       TextColor="White"
-                      Grid.Row="0"
+                      Grid.Row="1"
                       Grid.Column="0"
                       HorizontalOptions="Center"
                       VerticalOptions="Center"/>
 
                 <Label x:Name="txtApellido"
                       TextColor="White"
-                      Grid.Row="0"
+                      Grid.Row="1"
                       Grid.Column="1"
                       HorizontalOptions="Center"
                        VerticalOptions="Center"/>
 
                 <Label Text="VA"
                       TextColor="White"
-                      Grid.Row="1"
+                      Grid.Row="2"
                       Grid.Column="0"
                       HorizontalOptions="Center"
                       VerticalOptions="Center"/>
 
                 <Label x:Name="txtVa"
                       TextColor="White"
-                      Grid.Row="1"
+                      Grid.Row="2"
                       Grid.Column="1"
                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>   
+                       VerticalOptions="Center"/>
 
+                <Label Text="Fecha"
+                       TextColor="White"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
 
+                <Label x:Name="txtFecha"
+                       TextColor="White"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                
+                <Label Text="Ciudad"
+                        TextColor="White"
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
 
+                <Label x:Name="txtCiudad"
+                        TextColor="White"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+
+                <Label Text="Monto Inicial"
+                        TextColor="White"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <Label x:Name="txtMontoInicial"
+                        TextColor="White"
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+
+                <Label Text="Cuota Mensual"
+                        TextColor="White"
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <Label x:Name="txtCuotaMensual"
+                        TextColor="White"
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                         VerticalOptions="Center"/>
+
+                <Label Text="Pago Total"
+                        TextColor="White"
+                        Grid.Row="7"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                <Label x:Name="txtPagoTotal"
+                        TextColor="White"
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                         VerticalOptions="Center"/> 
             </Grid>
-
+            <Button Text="Cerrar Sesión"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   BackgroundColor="Red"  
+                   TextColor="Black"
+                   Clicked="Button_Clicked"
+                   HeightRequest="50"
+                   CornerRadius="15"
+                   HorizontalOptions="FillAndExpand"
+                  />
 
         </VerticalStackLayout>
     </ScrollView>

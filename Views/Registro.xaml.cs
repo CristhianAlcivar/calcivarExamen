@@ -2,19 +2,20 @@ namespace calcivarExamen.Views;
 
 public partial class Registro : ContentPage
 {
-    public string usuario { get; set; }
     private double costoUPS = 300.0;
+    private double cuotaMensual = 0;
+    private string usuarioConectado;
 
     public Registro(string usuario)
 	{
 		InitializeComponent();
-        usuario = usuario;
-        BindingContext = this;
+        usuarioConectado = usuario;
+        txtUsuario.Text = "Usuario conectado "+ usuario;
     }
 
     private void OnCalcularPagoClicked(object sender, EventArgs e)
     {
-        int montoInicial = Int32.Parse(txtMonto.Text);
+        int montoInicial = int.Parse(txtMonto.Text);
 
         if (montoInicial >= costoUPS || montoInicial <= 0)
         {
@@ -26,10 +27,22 @@ public partial class Registro : ContentPage
         double cuotaConInteres = (restante / 3) * 1.05;
 
         txtPago.Text = cuotaConInteres.ToString();
+        cuotaMensual = cuotaConInteres;
     }
     private void OnResumenClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Resumen());
+        int montoInicial = int.Parse(txtMonto.Text);
+        Navigation.PushAsync(new Resumen(
+            usuarioConectado,
+            txtNombre.Text,
+            txtApellido.Text,
+            pickerVoltiamperio.SelectedItem,
+            txtFecha.Date,
+            pickerCiudad.SelectedItem,
+            txtMonto.Text,
+            cuotaMensual,
+            (cuotaMensual * 3) + montoInicial
+            ));
     }
 
 }
